@@ -85,7 +85,7 @@ export const SCHEMA_FR = {
       attrLeft: {
         endofsession: {
           label: 'Fin de session',
-          description: 'La première ligne est toujours cochée. Au début de chaque session, coeches-en deux autres (pour un total de trois par session).',
+          description: 'La première ligne est toujours cochée. Au début de chaque session, coches-en deux autres (pour un total de trois par session).',
           customLabel: false,
           userLabel: false,
           type: 'ListMany',
