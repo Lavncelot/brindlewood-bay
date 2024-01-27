@@ -1,10 +1,7 @@
-import { SCHEMA_EN } from "./schema-en.js";
-import { SCHEMA_RU } from "./schema-ru.js";
+import { SCHEMAS } from './schemas/_index.js';
 
-Hooks.once("pbtaSheetConfig", () => {
-  game.settings.set("pbta", "sheetConfigOverride", true);
+Hooks.once('pbtaSheetConfig', () => {
+  game.settings.set('pbta', 'sheetConfigOverride', true);
 
-  let schema = game.modules.get("ru-ru")?.active ? SCHEMA_RU : SCHEMA_EN;
-
-  game.pbta.sheetConfig = schema;
+  game.pbta.sheetConfig = SCHEMAS[game.i18n.lang] ?? SCHEMAS['en'];
 });
